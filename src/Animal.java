@@ -13,7 +13,7 @@ public class Animal {
             System.out.println(this.name + " zostal nakarmiony jego aktualna waga to: " + this.weight);
         }
         else{
-            System.out.println("nie mozesz nakarmic martwego zwierzecia");
+            System.out.println("nie mozesz nakarmic martwego zwierzeciaa");
         }
 
     }
