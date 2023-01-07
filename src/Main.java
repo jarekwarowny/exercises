@@ -1,4 +1,6 @@
+import device.Car;
 import device.Device;
+import device.Phone;
 
 public class Main {
     public static void main(String[] args) {
@@ -49,5 +51,10 @@ public class Main {
         System.out.println(iphone.producer);
         System.out.println(iphone.model);
 
+        Car car = new Car(2000.0, "red", "ON");
+        car.turnOn();
+
+        Phone phone = new Phone(4.3, "sss");
+        phone.turnOn();
     }
 }

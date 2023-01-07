@@ -1,12 +1,14 @@
+package device;
+
 import device.Device;
 
 public class Car extends Device {
 
-    Double millage;
+    public Double millage;
 
-    String color;
+    public String color;
 
-    String fuelType;
+    public String fuelType;
 
     public Car(Double millage, String color, String fuelType) {
         super("X5", "BMW", 2021);
@@ -17,10 +19,17 @@ public class Car extends Device {
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "device.Car{" +
                 "millage=" + millage +
                 ", color='" + color + '\'' +
                 ", fuelType='" + fuelType + '\'' +
                 '}';
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Start engine");
+        System.out.println("Press gas");
+        System.out.println("Go");
     }
 }

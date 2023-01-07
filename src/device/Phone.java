@@ -1,10 +1,12 @@
+package device;
+
 import device.Device;
 
 public class Phone extends Device {
 
-    Double screenSize;
+    public Double screenSize;
 
-    String os;
+    public String os;
 
     public Phone(Double screenSize, String os) {
         super("Nokia","aa", 2010);
@@ -14,9 +16,16 @@ public class Phone extends Device {
 
     @Override
     public String toString() {
-        return "Phone{" +
+        return "device.Phone{" +
                 "screenSize=" + screenSize +
                 ", os='" + os + '\'' +
                 '}';
+    }
+
+    @Override
+    public void turnOn() {
+      System.out.println("click");
+      System.out.println("wait");
+      System.out.println("ready");
     }
 }

@@ -1,12 +1,12 @@
 package device;
 
-public class Device {
+public abstract class Device {
 
-    public String model;
+    public final String model;
 
-    public String producer;
+    public final String producer;
 
-    public int yearOfProduction;
+    public final int yearOfProduction;
 
     public Device(String model, String producer, int yearOfProduction) {
         this.model = model;
@@ -22,4 +22,6 @@ public class Device {
                 ", yearOfProduction=" + yearOfProduction +
                 '}';
     }
+
+    public abstract void turnOn();
 }
