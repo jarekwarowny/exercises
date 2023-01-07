@@ -1,8 +1,9 @@
 package device;
 
-import device.Device;
+import creatures.Human;
+import creatures.Saleable;
 
-public class Car extends Device {
+public class Car extends Device implements Saleable {
 
     public Double millage;
 
@@ -31,5 +32,17 @@ public class Car extends Device {
         System.out.println("Start engine");
         System.out.println("Press gas");
         System.out.println("Go");
+    }
+
+    @Override
+    public void Sell(Human seller, Human buyer, Human price) {
+        if (buyer.cash >= price.cash) {
+            System.out.println("Auto zostało sprzedana");
+        } else {
+            System.out.println("Nie możesz kupić auta za malo pieniedzy");
+        }
+        if (seller.car == this) {
+
+        }
     }
 }

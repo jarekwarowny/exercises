@@ -1,8 +1,10 @@
+package creatures;
+
 public class Animal {
-    final String species;
-    String name;
-    Double weight;
-    Boolean alive;
+    public final String species;
+    public String name;
+    public Double weight;
+    public Boolean alive;
 
     public Animal(String species) {
         this.species = species;

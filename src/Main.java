@@ -1,5 +1,6 @@
+import creatures.Animal;
+import creatures.Human;
 import device.Car;
-import device.Device;
 import device.Phone;
 
 public class Main {
@@ -56,5 +57,14 @@ public class Main {
 
         Phone phone = new Phone(4.3, "sss");
         phone.turnOn();
+
+        Human seller = new Human("Jarek");
+        Human buyer = new Human("Bartek");
+        seller.car = BMW;
+        buyer.cash = 10000.0;
+        seller.cash = buyer.cash;
+        buyer.cash = buyer.cash;
+
+
     }
 }
