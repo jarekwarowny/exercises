@@ -1,11 +1,13 @@
 public class Animal {
-    String species;
+    final String species;
     String name;
     Double weight;
     Boolean alive;
 
     public Animal(String species) {
         this.species = species;
+        this.alive = true;
+        this.weight = 60.0;
     }
     public void feed(){
         if(this.alive == true) {

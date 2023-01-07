@@ -1,27 +1,25 @@
+import device.Device;
+
 public class Main {
     public static void main(String[] args) {
 
-        Car passat = new Car("vw", "passat", 2001);
-        passat.millage = 70000.0;
+        Car BMW = new Car(40000.0, "blue", "ON");
+        BMW.fuelType = null;
 
-        System.out.println("Producent: " + passat.producer);
-        System.out.println("Model auta: " + passat.model);
-        System.out.println("Rok produkcji: " + passat.yearOfProduction);
-        System.out.println("Przebieg: " + passat.millage);
+        System.out.println("Typ paliwa: " + BMW.fuelType);
+        System.out.println("Kolor auta: " + BMW.color);
+        System.out.println("Przebieg: " + BMW.millage);
 
-        Car fiat = new Car("fiat","bravo",2010);
-        fiat.millage = 312312.5;
+        Car fiat = new Car(3000.0,"red","ON");
         System.out.println();
-        System.out.println("Producent: " + fiat.producer);
-        System.out.println("Model auta: " + fiat.model);
-        System.out.println("Rok produkcji: " + fiat.yearOfProduction);
+        System.out.println("Paliwo: " + fiat.fuelType);
+        System.out.println("Kolor auta: " + fiat.color);
         System.out.println("Przebieg: " + fiat.millage);
 
         Animal kot = new Animal("Ssak");
         kot.name = "puszek";
         kot.weight = 1.5;
         kot.alive = true;
-
         System.out.println("gatunek: " + kot.species);
         System.out.println("imie: " + kot.name);
         System.out.println("waga: " + kot.weight);
@@ -31,12 +29,24 @@ public class Main {
         else{
             System.out.println("czy zyje: nie");
         }
+
         kot.takeForAWalk();
         kot.takeForAWalk();
         kot.takeForAWalk();
         kot.takeForAWalk();
         kot.takeForAWalk();
         kot.feed();
+
+        Human kacper = new Human("Kacper");
+        kacper.feed();
+        System.out.println(kacper.weight);
+        System.out.println(kacper.species);
+
+        Phone iphone = new Phone(4.3, "aa");
+        iphone.toString();
+        System.out.println(iphone.screenSize);
+        System.out.println(iphone.os);
+
 
 
 
