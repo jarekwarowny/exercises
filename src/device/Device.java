@@ -2,11 +2,11 @@ package device;
 
 public class Device {
 
-    String model;
+    public String model;
 
-    String producer;
+    public String producer;
 
-    int yearOfProduction;
+    public int yearOfProduction;
 
     public Device(String model, String producer, int yearOfProduction) {
         this.model = model;

@@ -15,6 +15,7 @@ public class Main {
         System.out.println("Paliwo: " + fiat.fuelType);
         System.out.println("Kolor auta: " + fiat.color);
         System.out.println("Przebieg: " + fiat.millage);
+        System.out.println(fiat.yearOfProduction);
 
         Animal kot = new Animal("Ssak");
         kot.name = "puszek";
@@ -43,14 +44,10 @@ public class Main {
         System.out.println(kacper.species);
 
         Phone iphone = new Phone(4.3, "aa");
-        iphone.toString();
         System.out.println(iphone.screenSize);
         System.out.println(iphone.os);
-
-
-
-
+        System.out.println(iphone.producer);
+        System.out.println(iphone.model);
 
     }
-
 }

@@ -7,7 +7,7 @@ public class Phone extends Device {
     String os;
 
     public Phone(Double screenSize, String os) {
-        super("Stinger","Kia", 2018);
+        super("Nokia","aa", 2010);
         this.screenSize = screenSize;
         this.os = os;
     }
