@@ -6,21 +6,34 @@ import device.Phone;
 public class Main {
     public static void main(String[] args) {
 
-        Car BMW = new Car(40000.0, "blue", "ON");
+        Car BMW = new Car(40000.0, "blue", "ON") {
+            @Override
+            public void refuel() {
+
+            }
+        };
         BMW.fuelType = null;
 
         System.out.println("Typ paliwa: " + BMW.fuelType);
         System.out.println("Kolor auta: " + BMW.color);
         System.out.println("Przebieg: " + BMW.millage);
 
-        Car fiat = new Car(3000.0,"red","ON");
+        Car fiat = new Car(3000.0, "red", "ON") {
+            @Override
+            public void refuel() {
+
+            }
+        };
         System.out.println();
         System.out.println("Paliwo: " + fiat.fuelType);
         System.out.println("Kolor auta: " + fiat.color);
         System.out.println("Przebieg: " + fiat.millage);
         System.out.println(fiat.yearOfProduction);
 
-        Animal kot = new Animal("Ssak");
+        Animal kot = new Animal("Ssak") {
+            @Override
+            public void feed(double foodWeight) {}
+        };
         kot.name = "puszek";
         kot.weight = 1.5;
         kot.alive = true;
@@ -52,7 +65,12 @@ public class Main {
         System.out.println(iphone.producer);
         System.out.println(iphone.model);
 
-        Car car = new Car(2000.0, "red", "ON");
+        Car car = new Car(2000.0, "red", "ON") {
+            @Override
+            public void refuel() {
+
+            }
+        };
         car.turnOn();
 
         Phone phone = new Phone(4.3, "sss");
@@ -60,11 +78,9 @@ public class Main {
 
         Human seller = new Human("Jarek");
         Human buyer = new Human("Bartek");
-        seller.car = BMW;
+        seller.cash = 111111.0;
         buyer.cash = 10000.0;
         seller.cash = buyer.cash;
         buyer.cash = buyer.cash;
-
-
     }
 }

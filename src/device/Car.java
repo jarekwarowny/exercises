@@ -3,12 +3,10 @@ package device;
 import creatures.Human;
 import creatures.Saleable;
 
-public class Car extends Device implements Saleable {
+public abstract class Car extends Device implements Saleable {
 
     public Double millage;
-
-    public String color;
-
+    public  String color;
     public String fuelType;
 
     public Car(Double millage, String color, String fuelType) {
@@ -17,6 +15,8 @@ public class Car extends Device implements Saleable {
         this.color = color;
         this.fuelType = fuelType;
     }
+
+    public abstract void refuel();
 
     @Override
     public String toString() {
@@ -41,8 +41,8 @@ public class Car extends Device implements Saleable {
         } else {
             System.out.println("Nie możesz kupić auta za malo pieniedzy");
         }
-        if (seller.car == this) {
-
+        if (seller.cash == price.cash) {
+            System.out.println("Masz na auto ale na naprawe juz nie");
         }
     }
 }
